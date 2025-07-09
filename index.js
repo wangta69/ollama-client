@@ -1,6 +1,15 @@
 const axios = require('axios');
 const cheerio = require('cheerio'); // HTML 파싱용
+require('dotenv').config();
 const mysql = require('mysql');
+const pool = mysql.createPool(
+  {
+    host: process.env.DB_HOST || '127.0.0.1',
+    user: process.env.DB_USER || 'db_user',
+    password: process.env.DB_PASSWORD || 'db_password',
+    database: process.env.DB_DATABASE || 'database',
+    multipleStatements: true
+  }); // [실서버용]
 
 async function fetchAndGenerateMeta(url) {
   const html = await axios.get(url).then(res => res.data);
