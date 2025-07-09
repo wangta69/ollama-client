@@ -1,0 +1,7 @@
+ollama run gemma3
+ollama run mistral
+
+path 등록 혹은 바로 처리
+C:\Users\Pondol\AppData\Local\Programs\Ollama\ollama.exe 
+
+& "C:\Users\Pondol\AppData\Local\Programs\Ollama\ollama.exe" serve
