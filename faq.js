@@ -115,7 +115,7 @@ async function findBestAnswer(userQuestion, collection) {
 
 // ✅ 메인 실행
 (async () => {
-  // const collection = await initChroma();
+  // await initChroma();
   const collection = await getChromaCollection('faq-data');
   // 테스트용 질문
   await findBestAnswer('전화번호 알려줘', collection);
